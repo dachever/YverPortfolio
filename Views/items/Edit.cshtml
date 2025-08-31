@@ -1,0 +1,23 @@
+﻿@model MyPortfolio.Models.Item
+@{
+    ViewData["Title"] = "Edit Item";
+}
+
+<div class="card shadow p-4 bg-white">
+    <h2 class="mb-3">Edit Item</h2>
+
+    <form>
+        <div class="mb-3">
+            <label for="itemId" class="form-label">Item ID</label>
+            <input type="text" class="form-control" id="itemId" value="@Model.Id" readonly />
+        </div>
+
+        <div class="mb-3">
+            <label for="itemName" class="form-label">Item Name</label>
+            <input type="text" class="form-control" id="itemName" value="@Model.Name" />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Save Changes</button>
+        <a asp-controller="Home" asp-action="Index" class="btn btn-secondary ms-2">Cancel</a>
+    </form>
+</div>

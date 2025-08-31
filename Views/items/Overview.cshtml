@@ -1,0 +1,13 @@
+﻿@model MyPortfolio.Models.Item
+@{
+    ViewData["Title"] = "Item Overview";
+}
+
+<div class="container mt-4">
+    <h2 class="mb-3">Item Overview</h2>
+
+    <div class="card p-3 shadow-sm bg-white">
+        <p><strong>Item Name:</strong> @Model.Name</p>
+        <a class="btn btn-primary" asp-controller="Items" asp-action="Edit" asp-route-id="@Model.Id">Edit Item</a>
+    </div>
+</div>
