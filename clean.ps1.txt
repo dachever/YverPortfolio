@@ -1,0 +1,3 @@
+# Clean bin and obj folders recursively
+Get-ChildItem -Include bin,obj -Recurse -Force | Remove-Item -Recurse -Force
+Write-Output "✅ bin/ and obj/ folders cleaned successfully."
